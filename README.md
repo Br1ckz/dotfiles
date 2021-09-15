@@ -1,0 +1,3 @@
+
+# Create symlinks 
+./install.sh

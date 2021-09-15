@@ -1,0 +1,4 @@
+[user]
+    name = Bryce Ciemiewicz
+[core]
+	excludesFile = /home/bciemiewicz/.gitignore
