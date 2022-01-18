@@ -1,16 +1,35 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+autoload -Uz compinit promptinit
+compinit
+promptinit
+
+# This will set the default prompt to the walters theme
+#prompt walters
+
+zstyle ':completion:*' menu select
+zstyle ':completion::complete:*' gain-privileges 1
+
+# Define the theme
+#prompt_mytheme_setup() {
+PROMPT="[%n %~] "
+RPROMPT=
+#}
+
+# Add the theme to promptsys
+#prompt_themes+=( mytheme )
+
+# Load the theme
+#prompt mytheme
+
+# aliases
+if [ -f ~/.config/aliasrc ]; then 
+	source ~/.config/aliasrc
 fi
 
-# source /opt/powerlevel10k/powerlevel10k.zsh-theme
-# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# java
+export JAVA_HOME='/usr/bin/java'
+path+=('$JAVA_HOME')
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
-alias ra='ranger'
+# path
+path+=('~/.scripts')
+path+=('~/.local/bin')
+export PATH
