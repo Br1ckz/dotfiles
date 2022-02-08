@@ -10,8 +10,8 @@ zstyle ':completion::complete:*' gain-privileges 1
 
 # Define the theme
 #prompt_mytheme_setup() {
-PROMPT="[%n %~] "
-RPROMPT=
+PROMPT="%F{51}[%n %~]%f "
+#RPROMPT=
 #}
 
 # Add the theme to promptsys
