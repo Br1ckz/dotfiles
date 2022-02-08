@@ -44,10 +44,8 @@ set wildmenu
 set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdfi,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
-filetype on
-filetype plugin on
+filetype plugin indent on
 syntax on
-filetype indent on
 
 set incsearch
 set hlsearch
@@ -60,14 +58,11 @@ let g:tokyonight_enable_italic = 1
 
 colorscheme tokyonight
 
+let g:airline_theme = "tokyonight"
+
 " Open when no files were speficied on vim launch
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
-
-
-
-
-
