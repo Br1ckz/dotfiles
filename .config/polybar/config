@@ -28,7 +28,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/mybar]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:}
 width = 100%
 height = 27
 ;offset-x = 1%
@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = xwindow
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = pulseaudio xbacklight battery cpu wlan eth temperature filesystem date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -260,17 +260,17 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = " %m/%d/%Y"
-date-alt = " %m/%d/%Y"
+date = " %a, %b %d, %Y"
+;date-alt = " %m/%d/%Y"
 
 time = %I:%M %p 
-time-alt = %I:%M:%S %p
+;time-alt = %I:%M:%S %p
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
-label = %time% %date% 
+label = %date% at %time% 
 
 [module/pulseaudio]
 type = internal/pulseaudio
