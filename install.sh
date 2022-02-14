@@ -1,12 +1,30 @@
 #!/bin/bash
 
+# install.sh
+# symlink dotfiles to the appropriate places
+
 #Get dotfiles installation directory
 DOTFILES_DIR=$(pwd)
 
-ln -sf "DOTFILES_DIR/.bash_profile" ~
-ln -sf "DOTFILES_DIR/.bashrc" ~
-ln -sf "DOTFILES_DIR/.gitconfig" ~
-ln -sf "DOTFILES_DIR/.p10k.zsh" ~
-ln -sf "DOTFILES_DIR/.vim" ~
-ln -sf "DOTFILES_DIR/.vimrc" ~
-ln -sf "DOTFILES_DIR/.zshrc" ~
+
+DOTFILES=(
+	".bashrc"
+	".config"
+	".gitconfig"
+	".gitignore"
+	".xinitrc"
+	".xprofile"
+	".zshenv"
+	".zshrc"
+	".config/env"
+	".config/i3/autostart.sh"
+	".config/i3/config"
+	".config/polybar/config"
+	".cpnfig/polybar/launch.sh"
+	".config/termite/config"
+	".vim/vimrc"
+)
+
+for dotfile in "${DOTFILES[@]};do
+	ln -sf "${DOTFILES_DIR}/${dotfile} "${HOME}/${dotfile}
+done
