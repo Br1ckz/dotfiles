@@ -1,1 +1,10 @@
+<<<<<<< HEAD
 ~/Develop/dotfiles/.zprofile
+=======
+/**
+!.config/nvim/init.vim
+!.zshenv
+!.zshrc
+!.gitignore
+!.xinitrc
+>>>>>>> b14e622 (changed .gitignore)
