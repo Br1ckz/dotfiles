@@ -1,7 +1,0 @@
-#!/bin/sh
-alias ls="ls --color=auto" \
-		vrc="vim ~/.vimrc" \
-		ka="killall" \
-		ra="ranager"
-
-	#alias cp="cp -iv"
