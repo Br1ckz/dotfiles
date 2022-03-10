@@ -39,6 +39,6 @@ DOTFILES=(
 	".vim/vimrc"
 )
 
-for dotfile in "${DOTFILES[@]};do
-	mv "${DOTFILES_DIR}/${dotfile} "${HOME}/${dotfile}
+for dotfile in "${DOTFILES[@]}";do
+	mv "${DOTFILES_DIR}"/"${dotfile}" "${HOME}"/"${dotfile}"
 done
