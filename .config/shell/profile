@@ -4,7 +4,7 @@
 
 
 # Default programs
-export EDITOR="vim"
+export EDITOR="neovim"
 export TERMINAL="termite"
 export BROWSER="brave"
 
