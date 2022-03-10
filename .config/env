@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# Default programs
-export EDITOR="vim"
-export TERMINAL="termite"
-export BROWSER="brave"
-
-# aliases
-alias setbg="source ~/.local/bin/setbg"
