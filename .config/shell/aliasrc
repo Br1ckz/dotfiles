@@ -1,9 +1,16 @@
 #!/bin/sh
-alias ls="ls --color=auto" \
-		vrc="vim ~/.vimrc" \
-		ka="killall" \
-		ra="ranager"
 
-	#alias cp="cp -iv"
+# Abbreviations for common commands
+alias ka="killall" \
+		ra="ranager" \
+		v="$EDITOR" \
+		p="pacman"
 
-alias dot="/usr/bin/git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME"
+# Common configs
+alias vrc="vim $HOME/.config/nvim/init.vim"
+
+# Commands with color
+alias ls="ls -hN --color=auto --group-directories-first" \
+		grep="grep --color=auto"
+
+alias dot="/usr/bin/git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME" \
