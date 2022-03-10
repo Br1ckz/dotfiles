@@ -6,6 +6,20 @@
 #Get dotfiles installation directory
 DOTFILES_DIR=$(pwd)
 
+DIRS=(
+	".config"
+	".config/i3"
+	".config/polybar"
+	".config/nvim"
+	".config/shell"
+	".config/termite"
+	".config/x11"
+	".config/zsh"
+)
+
+for dir in "${DIRS[@]}";do
+	mkdir -p "${HOME}"/"${dir}"
+done
 
 DOTFILES=(
 	".bashrc"
@@ -26,5 +40,5 @@ DOTFILES=(
 )
 
 for dotfile in "${DOTFILES[@]};do
-	ln -sf "${DOTFILES_DIR}/${dotfile} "${HOME}/${dotfile}
+	mv "${DOTFILES_DIR}/${dotfile} "${HOME}/${dotfile}
 done
