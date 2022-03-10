@@ -25,11 +25,12 @@ if [ -f ~/.config/aliasrc ]; then
 	source ~/.config/aliasrc
 fi
 
-# java
-export JAVA_HOME='/usr/bin/java'
-path+=('$JAVA_HOME')
-
 # path
-path+=('~/.scripts')
-path+=('~/.local/bin')
+PATH="$PATH:$HOME/.local/bin"
 export PATH
+
+# Import the colors.
+. "${HOME}/.cache/wal/colors.sh"
+
+# Create the alias.
+alias dmen='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
