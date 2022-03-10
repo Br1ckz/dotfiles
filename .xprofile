@@ -1,5 +1,1 @@
-#~/bin/sh
-
-[ -f ~/.config/env ] && source ~/.config/env
-
-setbg & 
+/home/bryce/.config/x11/xprofile
