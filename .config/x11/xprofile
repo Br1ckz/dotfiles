@@ -1,0 +1,6 @@
+#~/bin/sh
+
+[ -f ~/.config/env ] && source ~/.config/env
+
+source ~/.local/bin/setbg
+setbg & 
