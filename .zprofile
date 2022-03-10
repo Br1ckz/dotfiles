@@ -1,0 +1,1 @@
+/home/bryce/.config/shell/profile
