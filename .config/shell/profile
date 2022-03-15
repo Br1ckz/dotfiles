@@ -1,8 +1,5 @@
 #!/bin/zsh
 
-[[ -f "$HOME/.config/shell/aliasrc" ]] && source "$HOME/.config/shell/aliasrc"
-
-
 # Default programs
 export EDITOR="nvim"
 export TERMINAL="termite"
@@ -18,5 +15,4 @@ export XDG_STATE_HOME=$HOME/.local/state
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export LESSHISTFILE="-"
-
 export RANGER_LOAD_DEFAULT_RC="False"

@@ -21,9 +21,7 @@ PROMPT="%F{51}[%n %~]%f "
 #prompt mytheme
 
 # aliases
-if [ -f ~/.config/aliasrc ]; then 
-	source ~/.config/aliasrc
-fi
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
 
 # path
 PATH="$PATH:$HOME/.local/bin"
