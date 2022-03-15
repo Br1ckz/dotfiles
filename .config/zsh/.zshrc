@@ -27,8 +27,6 @@ PROMPT="%F{51}[%n %~]%f "
 PATH="$PATH:$HOME/.local/bin"
 export PATH
 
-# Import the colors.
-. "${HOME}/.cache/wal/colors.sh"
 
-# Create the alias.
-alias dmen='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
+# Import the colors. uncomment if using pywal
+#. "${HOME}/.cache/wal/colors.sh"
