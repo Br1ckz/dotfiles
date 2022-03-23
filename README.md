@@ -3,7 +3,6 @@
 - Settings for:
 	- i3 (window manager)
 	- polybar (status bar)
-	- termite (terminal emulator)
 	- zsh (shell)
 	- vim/nvim (text editor)
 	- ranger (file manager)
