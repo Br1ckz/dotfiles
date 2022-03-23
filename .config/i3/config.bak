@@ -326,5 +326,6 @@ mode "$mode_gaps_left" {
         bindsym Escape mode "default"
 }
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
-exec --no-startup-id picom --config $HOME/.config/picom/picom.conf -b &
+exec --no-startup-id picom --config $HOME/.config/picom/picom.conf -b
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
