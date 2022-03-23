@@ -17,23 +17,13 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-;background = #222
-;background-alt = #444
-;;foreground = ${xrdb:color7:#222}
-;foreground = #dfdfdf
-;foreground-alt = #555
-;primary = #ffb52a
-;secondary = #e60053
-;alert = #bd2c40
-
-; colors set by Xresources
 background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
 foreground-alt = ${xrdb:color7:#222}
 primary = ${xrdb:color1:#222}
 secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
+
 [bar/mybar]
 monitor = ${env:MONITOR:}
 width = 100%
@@ -42,8 +32,6 @@ height = 27
 ;offset-y = 1%
 radius = 6.0
 fixed-center = false
-
-; set by Xresources
 background = ${colors.background}
 foreground = ${colors.foreground}
 
