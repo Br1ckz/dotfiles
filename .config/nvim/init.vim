@@ -15,13 +15,15 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vimwiki/vimwiki'
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 set title
 set number relativenumber
 set spell 
 set background=dark
-set highlight
+"set highlight
 set autoindent
 set smartcase 
 set smarttab
