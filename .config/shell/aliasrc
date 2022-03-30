@@ -7,7 +7,7 @@ alias ka="killall" \
 		p="pacman"
 
 # Common configs
-alias vrc="vim $HOME/.config/nvim/init.vim"
+alias vrc="nvim $HOME/.config/nvim/init.vim"
 
 # Commands with color
 alias ls="ls -hN --color=auto --group-directories-first" \
