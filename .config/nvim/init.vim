@@ -23,6 +23,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vimwiki/vimwiki'
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 Plug 'jiangmiao/auto-pairs'
+Plug 'aklt/plantuml-syntax'
+Plug 'weirongxu/plantuml-previewer.vim'
+Plug 'tyru/open-browser.vim'
 call plug#end()
 
 set title
@@ -51,7 +54,9 @@ set showmatch
 
 set wildmenu
 set wildmode=list:longest
-set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdfi,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+" Splits to the right and bottom
+set splitright splitbelow
 
 filetype on
 filetype plugin on
@@ -77,3 +82,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+augroup run_file
+	"autocmd BufEnter *.c let @r=":w\<CR> :!gcc % -o %:r\<CR> | :vsp | terminal ./%:r\<CR>"
+    autocmd BufEnter *.py let @r=":w\<CR> :vsp | terminal python %\<CR>i"
+	autocmd BufEnter *.puml let @r=":w\<CR> :!java -jar /usr/share/java/plantuml/plantuml.jar % \<CR>"
+augroup end
+
