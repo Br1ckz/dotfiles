@@ -68,24 +68,23 @@ set hlsearch
 set nohls
 
 " tokyonight-vim
-set termguicolors
+	set termguicolors
 
-let g:tokyonight_style = 'night' " available: night, storm
-let g:tokyonight_enable_italic = 1
+	let g:tokyonight_style = 'night' " available: night, storm
+	let g:tokyonight_enable_italic = 1
 
-colorscheme tokyonight
-let g:airline_theme = "tokyonight"
+	colorscheme tokyonight
+	let g:airline_theme = "tokyonight"
 
-" Open when no files were speficied on vim launch
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" nerdtree
+	" Open when no files were speficied on vim launch
+	autocmd StdinReadPre * let s:std_in=1
+	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Toggle nerdtree
-map <C-n> :NERDTreeToggle<CR>
+	" Toggle nerdtree
+	map <C-n> :NERDTreeToggle<CR>
 
 augroup run_file
 	"autocmd BufEnter *.c let @r=":w\<CR> :!gcc % -o %:r\<CR> | :vsp | terminal ./%:r\<CR>"
     autocmd BufEnter *.py let @r=":w\<CR> :vsp | terminal python %\<CR>i"
-	autocmd BufEnter *.puml let @r=":w\<CR> :!java -jar /usr/share/java/plantuml/plantuml.jar % \<CR>"
-augroup end
-
+	autocmd BufEnter *.java let @r=":w\<CR> :!javac % \<CR> :vsp | terminal java %:r \<CR>"
