@@ -4,5 +4,4 @@ bgloc=$HOME/.config/wallpaper
 
 [ -f "$1" ] && cp "$1" "$bgloc" && notify-send -i "$bgloc" "Wallpaper changed."
 
-xwallpaper --zoom "$HOME/.config/wallpaper"
-wal -i "$1"
+xwallpaper --zoom $bgloc
