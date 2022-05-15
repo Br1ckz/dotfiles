@@ -6,7 +6,7 @@
 setbg & 
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!
 
-autostart="mpd dunst pipewire wireplumber"
+autostart="mpd dunst pipewire wireplumber xcompmgr sxhkd" 
 
 for program in $autostart; do
 	pidof -s "$program" || setsid -f "$program"
