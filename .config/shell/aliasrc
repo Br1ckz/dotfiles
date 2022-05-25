@@ -17,5 +17,11 @@ alias \
 		grep="grep --color=auto" \ 
 		diff="diff --color=auto"
 
+# Verbosity and useful settings
+alias \ 
+		cp="cp -iv" \ 
+		mv="mv -iv" 
+
+# Alias for dotfiles
 alias \
 		dot="/usr/bin/git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME"
