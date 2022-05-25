@@ -5,7 +5,7 @@
 	- polybar (status bar)
 	- zsh (shell)
 	- vim/nvim (text editor)
-	- ranger (file manager)
+	- lf (file manager)
 - I minimize the files in $HOME
 	- Config files in $HOME/.config/
 	- Environmental variables in $HOME/.config/shell/profile
