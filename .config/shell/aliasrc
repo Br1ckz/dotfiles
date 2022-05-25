@@ -1,17 +1,21 @@
 #!/bin/sh
 
 # Abbreviations for common commands
-alias ka="killall" \
+alias \
+		ka="killall" \
 		ra="ranager" \
 		e="$EDITOR" \
 		p="pacman"
 
 # Common configs
-alias vrc="nvim $HOME/.config/nvim/init.vim"
+alias \
+		vrc="nvim $HOME/.config/nvim/init.vim"
 
 # Commands with color
-alias ls="ls -hN --color=auto --group-directories-first" \
+alias \ 
+		ls="ls -hN --color=auto --group-directories-first" \
 		grep="grep --color=auto" \ 
-		diff="diff --color='auto'"
+		diff="diff --color=auto"
 
-alias dot="/usr/bin/git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME" \
+alias \
+		dot="/usr/bin/git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME"
