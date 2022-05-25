@@ -25,3 +25,6 @@ alias \
 # Alias for dotfiles
 alias \
 		dot="/usr/bin/git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME"
+
+alias \
+		lf="lf-uberzug"
