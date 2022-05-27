@@ -1,0 +1,5 @@
+# wm independent hotkeys
+
+# lock screen
+super + shift + m
+	i3lock -c 000000	
