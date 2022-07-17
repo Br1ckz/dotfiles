@@ -2,10 +2,10 @@ auto-reload yes
 
 bind-key j down
 bind-key k up 
-bind-key next articlelist
-bind-key prev articlelist
-bind-key next-feed articlelist
-bind-key next-feed articlelist
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K next-feed articlelist
 bind-key G end
 bind-key g home
 bind-key d pagedown
