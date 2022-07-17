@@ -20,12 +20,10 @@ Plug 'ghifarit53/tokyonight-vim'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'vimwiki/vimwiki'
 Plug 'jiangmiao/auto-pairs'
 Plug 'aklt/plantuml-syntax'
 Plug 'weirongxu/plantuml-previewer.vim'
 Plug 'tyru/open-browser.vim'
-Plug 'lervag/vimtex'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 call plug#end()
@@ -85,40 +83,6 @@ set nohls
 
 	" Toggle nerdtree
 	map <C-n> :NERDTreeToggle<CR>
-
-" vimtex
-	" This is necessary for VimTeX to load properly. The "indent" is optional.
-	" Note that most plugin managers will do this automatically.
-	filetype plugin indent on
-
-	" This enables Vim's and neovim's syntax-related features. Without this, some
-	" VimTeX features will not work (see ":help vimtex-requirements" for more
-	" info).
-	syntax enable
-
-	" Viewer options: One may configure the viewer either by specifying a built-in
-	" viewer method:
-	let g:vimtex_view_method = 'zathura'
-
-	" Or with a generic interface:
-	let g:vimtex_view_general_viewer = 'okular'
-	let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-
-	" VimTeX uses latexmk as the default compiler backend. If you use it, which is
-	" strongly recommended, you probably don't need to configure anythig. If you
-	" want another compiler backend, you can change it as follows. The list of
-	" supported backends and further explanation is provided in the documentation,
-	" see ":help vimtex-compiler".
-	let g:vimtex_compiler_method = 'latexrun'
-
-	" Most VimTeX mappings rely on localleader and this can be changed with the
-	" following line. The default is usually fine and is the symbol "\".
-	"let maplocalleader = ","n
-
-" vimwiki
-	" set to markdown
-	let g:vimwiki_list = [{'path': '~/vimwiki/',
-		\ 'syntax': 'markdown', 'ext': '.md'}]	
 
 "augroup run_file
 	"autocmd BufEnter *.c let @r=":w\<CR> :!gcc % -o %:r\<CR> | :vsp | terminal ./%:r\<CR>"
