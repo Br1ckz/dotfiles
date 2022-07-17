@@ -1,5 +1,4 @@
 #!/bin/sh
-
 bgloc=$HOME/.config/wallpaper
 
 [ -f "$1" ] && cp "$1" "$bgloc" && notify-send -i "$bgloc" "Wallpaper changed."
