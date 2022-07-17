@@ -6,10 +6,12 @@
 setbg & 
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!
 
-autostart="mpd dunst pipewire wireplumber xcompmgr sxhkd" 
+autostart="mpd dunst xcompmgr sxhkd" 
 
 for program in $autostart; do
 	pidof -s "$program" || setsid -f "$program"
 done >/dev/null 2>&1
 
 [ -n "$xrdbpid" ] && wait "$xrdbpid"
+
+pulseaudio --start
