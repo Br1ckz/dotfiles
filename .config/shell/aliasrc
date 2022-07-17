@@ -1,5 +1,8 @@
 #!/bin/sh
 
+
+alias sudo="sudo "
+
 # Abbreviations for common commands
 alias \
 		ka="killall" \
