@@ -1,1 +1,10 @@
-*
+/*
+!.gitignore
+.config
+!.config/nvim/*
+!.config/lf/*
+!.config/newsboat/*
+!.config/shell/*
+!.config/x11/*
+!.config/zsh/*
+!.local/bin/*
