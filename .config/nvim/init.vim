@@ -24,8 +24,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'aklt/plantuml-syntax'
 Plug 'weirongxu/plantuml-previewer.vim'
 Plug 'tyru/open-browser.vim'
-Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 set title
@@ -131,10 +131,20 @@ lua << EOF
 	  -- This is the default in Nvim 0.7+
 	  debounce_text_changes = 150,
 	}
-	--require('nvim-lsp-install').setup{}
 
+	require("nvim-lsp-installer").setup({
+    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+    ui = {
+        icons = {
+            server_installed = "✓",
+            server_pending = "➜",
+            server_uninstalled = "✗"
+        }
+    }
+})
 	local lspconfig = require('lspconfig')
 	lspconfig.pyright.setup{}
 	lspconfig.jdtls.setup{}
 	lspconfig.bashls.setup{}
+	lspconfig.clangd.setup{}
 EOF
