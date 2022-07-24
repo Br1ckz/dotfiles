@@ -8,4 +8,6 @@
 !.config/shell/
 !.config/x11/
 !.config/zsh/
+!.config/zsh/.zshrc
+.config/zsh/*
 !.local/bin/
