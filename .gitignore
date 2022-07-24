@@ -2,7 +2,7 @@
 !.gitignore
 !.config
 .config/*
-!.config/nvim/
+.config/nvim/
 !.config/lf/
 !.config/newsboat/
 !.config/shell/
